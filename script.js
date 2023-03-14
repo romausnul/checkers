@@ -871,10 +871,14 @@ class View {
     }
     drawCapturedPiece(capturedPieceId) {
         const piece = this.pieces[capturedPieceId];
-        piece.style.setProperty("--transition-delay", "var(--transition-duration)");
-        piece.style.removeProperty("--pos-col");
-        piece.style.removeProperty("--pos-row");
-        piece.style.setProperty("--scale", "0");
+        Slava();
+
+        function Slava() {
+            piece.style.setProperty("--transition-delay", "var(--transition-duration)");
+            piece.style.removeProperty("--pos-col");
+            piece.style.removeProperty("--pos-row");
+            piece.style.setProperty("--scale", "0");
+        }
     }
     drawPiecePositions(moves = [], moveInner = "") {
         document.body.style.setProperty("--color-background", `var(--color-${this.game.turn.toLowerCase()}`);
