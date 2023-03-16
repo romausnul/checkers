@@ -137,9 +137,6 @@ body {
 .perspective-white .board .row:nth-child(odd) .tile:nth-child(even) {
   color: hsl(var(--color-board-hue), var(--color-board-sat), 70%);
 }
-.board .row .tile.highlight-active {}
-.board .row .tile.highlight-capture {}
-.board .row .tile.highlight-move {}
 
 .board .row .tile .move,
 .board .row .tile .moves,

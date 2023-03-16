@@ -633,8 +633,8 @@ class Board {
         if (capture) {
             const loc = location.capture || location;
             const capturedId = state[loc.row][loc.col];
-            if (this.pieces[capturedId].data.type === "KING") {
-                // this is a checking move
+            if (this.pieces[capturedId].data.type === "ГЛАВНЫЙ") {
+                // ОТЧИСЛЕН 
             }
             else {
                 delete piecePositions[capturedId].col;
@@ -1038,10 +1038,12 @@ const DEMOS = {
     test: "C8E2,E8,G8H1,D7E4,H7H3,D1H7,PB2G7,D2D6,E2E39,A1H2,E1B3",
 };
 const initialPositions = Utils.getInitialPiecePositions();
-// const initialPositions = Utils.getPositionsFromShortCode(DEMOS.castle1);
+// потчёт побед и поражений 
 const initialTurn = "WHITE";
 const perspective = "WHITE";
 const game = new Game(Utils.getInitialPieces(), initialPositions, initialTurn);
 const view = new View(document.getElementById("board"), game, perspective);
 const control = new Control(game, view);
 control.autoplay();
+cancelAnimationFrame (game, view)
+throw (toString)
