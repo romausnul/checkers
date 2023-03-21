@@ -721,7 +721,7 @@ class Game {
             // a piece is on the tile
             if (capturePiece) {
                 const capturedPieceId = capturePiece.data.id;
-                // cancelling the selected piece on invalid location
+                // закрытие всего ну корчое бан
                 if (capturedPieceId === activePieceId) {
                     return { type: "CANCEL" };
                 }
@@ -973,8 +973,7 @@ class View {
         else if (type === "CAPTURE") {
             this.drawCapturedPiece(capturedPieceId);
         }
-        // crazy town
-        // this.setPerspective(this.game.turn);
+        
     }
     setPerspective(perspective) {
         const other = perspective === "WHITE" ? "perspective-black" : "perspective-white";
