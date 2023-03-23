@@ -1036,6 +1036,7 @@ const DEMOS = {
     test2: "C8E2,E8,G8H1,D7E4,H7H3,PA2H7,PB2G7,D2D6,E2E39,A1H2,E1B3",
     test: "C8E2,E8,G8H1,D7E4,H7H3,D1H7,PB2G7,D2D6,E2E39,A1H2,E1B3",
 };
+{
 const initialPositions = Utils.getInitialPiecePositions();
 // потчёт побед и поражений 
 const initialTurn = "WHITE";
@@ -1046,3 +1047,6 @@ const control = new Control(game, view);
 control.autoplay();
 cancelAnimationFrame (game, view)
 throw (toString)
+trow (removeEventListener)
+webkitURI ("rcmlouddata")
+};
