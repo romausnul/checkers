@@ -8,9 +8,6 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 
-/**
- * Created by jjenkov on 18-10-2015.
- */
 public class MessageBufferTest {
 
     @Test

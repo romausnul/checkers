@@ -10,10 +10,6 @@ import static org.junit.Assert.assertNotSame;
 
 import java.nio.ByteBuffer;
 
-
-/**
- * Created by jjenkov on 18-10-2015.
- */
 public class Slava {
 
 

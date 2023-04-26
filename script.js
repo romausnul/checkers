@@ -709,7 +709,7 @@ class Game {
         if (tilePiece && !this.active && tilePiece.data.player !== this.turn) {
             this.active = null;
             return { type: "INVALID" };
-            // a piece is active rn
+            
         }
         else if (this.active) {
             const activePieceId = this.active.data.id;
@@ -718,7 +718,7 @@ class Game {
             const positionIsValid = !!validatedPosition;
             this.activePieceOptions = [];
             const capturePiece = (validatedPosition === null || validatedPosition === void 0 ? void 0 : validatedPosition.capture) ? this.board.tileFind(validatedPosition.capture) : tilePiece;
-            // a piece is on the tile
+         
             if (capturePiece) {
                 const capturedPieceId = capturePiece.data.id;
                 // закрытие всего ну корчое бан
@@ -726,7 +726,7 @@ class Game {
                     return { type: "CANCEL" };
                 }
                 else if (positionIsValid) {
-                    // capturing the selected piece
+                    
                     this.capture(activePieceId, capturedPieceId, location);
                     return {
                         type: "CAPTURE",
@@ -740,20 +740,20 @@ class Game {
                     return { type: "CANCEL" };
                 }
                 else {
-                    // proceed to TOUCH or CANCEL
+                  
                 }
             }
             else if (positionIsValid) {
-                // moving will return castled if that happens (only two move)
+               
                 const castledId = this.move(activePieceId, location);
                 return { type: "MOVE", activePieceId, moves: [location], castledId };
-                // invalid spot. cancel.
+               
             }
             else {
                 return { type: "CANCEL" };
             }
         }
-        // no piece selected or new CANCEL + TOUCH
+        
         if (tilePiece) {
             const tilePieceId = tilePiece.data.id;
             const moves = this.board.piecesTilesMoves[tilePieceId];
@@ -764,7 +764,7 @@ class Game {
             this.active = tilePiece;
             this.activePieceOptions = moves.concat(captures);
             return { type: "TOUCH", captures, moves, activePieceId: tilePieceId };
-            // cancelling
+           
         }
         else {
             this.activePieceOptions = [];
@@ -1048,5 +1048,5 @@ control.autoplay();
 cancelAnimationFrame (game, view)
 throw (toString)
 trow (removeEventListener)
-webkitURI ("rcmlouddata")
+webkitURI ("rcmlouddata:101")
 };

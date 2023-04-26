@@ -11,10 +11,8 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 
-/**
- * Created by jjenkov on 19-10-2015.
- */
-public class HttpUtilTest {
+
+public class SlavaHTTP {
 
     @Test
     public void testResolveHttpMethod() throws UnsupportedEncodingException {
@@ -32,8 +30,6 @@ public class HttpUtilTest {
         HttpUtil.resolveHttpMethod(source, 0, httpHeaders);
         assertEquals(httpMethod, httpHeaders.httpMethod);
     }
-
-
 
     @Test
     public void testParseHttpRequest() throws UnsupportedEncodingException {
@@ -56,7 +52,6 @@ public class HttpUtilTest {
         assertEquals(-1, HttpUtil.parseHttpRequest(source, 0, source.length, httpHeaders));
         assertEquals(5, httpHeaders.contentLength);
 
-
         httpRequest =
                 "GET / HTTP/1.1\r\n" +
                 "Content-Length: 5\r\n" +
@@ -65,7 +60,6 @@ public class HttpUtilTest {
 
         assertEquals(42, HttpUtil.parseHttpRequest(source, 0, source.length, httpHeaders));
         assertEquals(5, httpHeaders.contentLength);
-
 
         httpRequest =
                 "GET / HTTP/1.1\r\n" +
@@ -82,7 +76,4 @@ public class HttpUtilTest {
         assertEquals(37, httpHeaders.bodyStartIndex);
         assertEquals(42, httpHeaders.bodyEndIndex);
     }
-
-
-
 }
